@@ -24,7 +24,7 @@ export default function Home(): ReactElement {
         <a href="https://zenn.dev/yskszk63" target="_blank" rel="noopener noreferrer">
           Zenn yskszk63
         </a>
-        <a href="htpps://twitter.com/yskszk63" target="_blank" rel="noopener noreferrer">
+        <a href="https://twitter.com/yskszk63" target="_blank" rel="noopener noreferrer">
           <i className="devicon-twitter-original"></i>
           Twitter @yskszk63
         </a>
