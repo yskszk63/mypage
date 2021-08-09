@@ -2,6 +2,8 @@ import { ReactElement } from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
+const GATAGID = process.env.GATAGID;
+
 export default function Home(): ReactElement {
   return (
     <div className={styles.container}>
@@ -29,6 +31,22 @@ export default function Home(): ReactElement {
           Twitter @yskszk63
         </a>
       </footer>
+
+      { GATAGID !== '' && (<>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GATAGID}`} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GATAGID}', {
+              page_path: window.location.pathname,
+            });`,
+          }}
+        />
+      </>)
+      }
     </div>
   )
 }
