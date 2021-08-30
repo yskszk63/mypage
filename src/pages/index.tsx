@@ -15,7 +15,7 @@ export default function Home(): ReactElement {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>yskszk63</h1>
+        <h1 className={styles.title} contentEditable={true} suppressContentEditableWarning={true}>yskszk63</h1>
       </main>
 
       <footer className={styles.footer}>
